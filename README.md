@@ -1,16 +1,8 @@
 # trued
+A mobile app for checking the reality of claims and rumours around the world and to help staying away from unreliable media sources. Let the truth prevail! 
 
-A fact checker app where you can see different claims and the truth behind them.
 
-## Getting Started
+It lets the user search for anything related to claims in the search box, and then the Google API it uses retrieves the data from the internet and shows it up on the mainscreen. It shows the different claims made related to the search keyword and also the reality behind those claims. Basically, its like a fact checker.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
