@@ -22,9 +22,7 @@ class MainDrawer extends StatelessWidget {
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.vertical(
                   bottom: Radius.circular(40.0)),
-              gradient: LinearGradient(
-                  colors: [Colors.blue, Colors.red[300]]
-              ),
+             
             ),
             width: double.infinity,
             padding: EdgeInsets.all(10.0),
@@ -163,9 +161,7 @@ class MainDrawer extends StatelessWidget {
 
             height: 80, width: double.infinity,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [Colors.red[300], Colors.blue]
-              ),
+            
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.vertical(top: Radius.circular(40.0)),
 

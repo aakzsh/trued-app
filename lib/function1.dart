@@ -38,9 +38,7 @@ f1(){
           decoration: BoxDecoration(
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.circular(10.0),
-            gradient: LinearGradient(
-                colors: [Colors.red[800], Colors.amber[900]]
-            ),
+           
           ),
         ),
       ),

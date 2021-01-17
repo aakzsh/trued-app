@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'main_drawer.dart';
-
+import 'Data/helper.dart';
 import 'function1.dart';
 import 'function2.dart';
+import 'Data/Api.dart';
 
 
 class homescreen extends StatefulWidget {
@@ -11,7 +12,21 @@ class homescreen extends StatefulWidget {
   _homescreenState createState() => _homescreenState();
 }
 
+
 class _homescreenState extends State<homescreen> {
+
+  final myController = TextEditingController();
+  HelperClass help = new HelperClass();
+  @override
+  void dispose(){
+    myController.dispose();
+    super.dispose();
+  }
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,9 +40,7 @@ class _homescreenState extends State<homescreen> {
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(0.0),
-                gradient: LinearGradient(
-                    colors: [Colors.red, Colors.green[900]]
-                ),
+
               ),
             ),
 
@@ -35,44 +48,60 @@ class _homescreenState extends State<homescreen> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget> [
 
-           Align(
-             alignment: Alignment.centerLeft,
-             child: Row(
-               mainAxisAlignment: MainAxisAlignment.spaceAround,
-               children: <Widget>[
-Padding(
-  padding: EdgeInsets.symmetric(horizontal: 10.0),
-  child:
-  Container(
-    decoration: BoxDecoration(
-      color: Colors.white,
-      shape: BoxShape.rectangle,
-      borderRadius: BorderRadius.circular( 30.0),
-    ),
-    child: TextField(
-      decoration: InputDecoration(
-        hintText: "Search",
-        border: InputBorder.none,
-        filled: true,
-        contentPadding: EdgeInsets.all(15.0),
-      ),
-    ),
-    height: 50,
-    width: 150,
+                Align(
+                    alignment: Alignment.center,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 0.0),
+                          child:
+                          Container(
 
-  ),
-),
-                 Image.asset(
 
-                   'assets/logo2.png',
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.circular( 30.0),
+                            ),
+                           child: TextField(
+                              controller: myController,
+                              decoration: InputDecoration(
+                                hintText: "Search",
+                                border: InputBorder.none,
+                                filled: true,
+                                contentPadding: EdgeInsets.all(15.0),
+                              ),
+                            ),
+                            height: 50,
+                            width: 100,
 
-                   height: 70,
-                   width: 100,
-                 ),
-               ],
-             )
 
-           ),
+                          ),
+                        ),
+                        MaterialButton(
+
+                          onPressed: (){
+                            help.search(myController.text);
+                          },
+
+
+                          color: Colors.green[600],
+                          child:  Icon(Icons.search),
+                          height: 50.0,
+                          minWidth: 0.0,
+                        ),
+                        Image.asset(
+
+                          'assets/logo2.png',
+
+                          height: 70,
+                          width: 100,
+                        ),
+                      ],
+                    )
+
+                ),
 
 
 
@@ -155,5 +184,6 @@ class ChoicePage extends StatelessWidget{
 
   }
 }
+
 
 
