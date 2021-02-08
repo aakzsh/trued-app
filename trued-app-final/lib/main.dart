@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             context,
                             MaterialPageRoute(
                               //press karne pe navigate karne ke liye
-                              builder: (context) => homescreen(),
+                              builder: (context) => HomeScreen(),
                             ),
                           );
                         },

@@ -1,19 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'main_drawer.dart';
-import 'Data/helper.dart';
+
 import 'function1.dart';
 import 'function2.dart';
 import 'Data/Api.dart';
 
 
-class homescreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  _homescreenState createState() => _homescreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
 
-class _homescreenState extends State<homescreen> {
+class _HomeScreenState extends State<HomeScreen> {
 
   final myController = TextEditingController();
   HelperClass help = new HelperClass();
